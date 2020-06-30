@@ -1,6 +1,7 @@
 FROM jenkins/jenkins:lts
 LABEL MAINTAINER="sanilkumar396"
 ARG DEBIAN_FRONTEND=noninteractive
+USER root
 RUN curl -sL https://deb.nodesource.com/setup_10.x | bash -
 RUN apt-get install -y nodejs
 RUN wget https://www-eu.apache.org/dist/maven/maven-3/3.6.3/binaries/apache-maven-3.6.3-bin.tar.gz
